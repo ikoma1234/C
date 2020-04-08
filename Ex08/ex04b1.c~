@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main(void)
+{
+  int a,b,c,d,e,f,okane,tounyuu,nomimono;
+
+  while(1<2){
+
+    okane=6600;
+
+    printf("1(O) 130\n2(O) 120\n3(O) 200\n4(O) 80\n5(O) 150\n6(O) 110\n釣銭切れ(X)");
+
+    printf("お金と飲み物番号を入力して下さい\n");
+  
+    if(scanf("%d%d%d%d%d%d",&a,&b,&c,&d,&e,&nomimono) == EOF) break;
+    
+    tounyuu=a*1000+b*500+c*100+d*50+e*10;
+
+    if(nomimono==1){
+
+      okane=okane-tounyuu;
+      
+      printf("ー状態表示エリアー\n飲み物1が出ます\nお釣り\n");
+
+      printf("%d\n,okane");
+
+      printf("が出ます\n");
+      
+    }
+  
+  }
+  return 0;
+}

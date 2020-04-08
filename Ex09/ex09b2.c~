@@ -1,0 +1,46 @@
+#include <stdio.h>
+#define ROW 4
+#define COLUMN 3
+int main(void){
+
+  int gyouretu[COLUMN][ROW];
+  int i,j;
+  float avg=0,row_avg[ROW],column_avg[COLUMN];
+  int sum=0;
+  printf("Input 3*4 data\n");
+  for(i=0 ;i<COLUMN; i++) {
+    sum = 0;
+    for(j=0;j<ROW;j++) {
+      scanf("%d",&gyouretu[i][j]);
+      sum += gyouretu[i][j];
+    }
+    avg += sum;
+    column_avg[i] = (float)sum/ROW;
+  }
+  
+  for(i=0; i<ROW; i++){
+    sum = 0;
+    for(j=0; j<COLUMN; j++){
+      sum += gyouretu[i][j];
+    }
+    avg += sum;
+    row_avg[i] = (float)sum/COLUMN;
+  }
+  printf("%.2f ",row_avg[3]);
+  printf("Data and average:\n");
+  for(i=0; i<COLUMN; i++){
+    for(j=0; j<ROW; j++){
+       printf("%4d",gyouretu[i][j]);
+       if(j==ROW-1) printf(" %.2f\n",column_avg[i]);
+    }
+  }
+  //printf("%f",avg*1.0/(ROW*COLUMN));
+  
+  for(i=0; i<ROW; i++){
+    printf("%.2f ",row_avg[i]);
+    if(i==ROW-1) printf(" %.2f\n",avg*1.0/(ROW*COLUMN));
+  }
+
+  
+  return 0;
+}

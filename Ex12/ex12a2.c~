@@ -1,0 +1,23 @@
+#include <stdio.h>
+#define SAIDAI 15
+
+int histgram(int);
+
+int main(void)
+{
+  int kazu[15];
+  int i,j;
+  j=0;
+  
+  while(kazu[i]>=0){
+    for(i=0;;i++){
+    scanf("%d",&kazu[i]);
+    j++;
+    }
+  }
+
+  for(i=0;i<=j;i++)
+  printf("%d"\n,kazu[i]);
+    
+  return 0;
+}

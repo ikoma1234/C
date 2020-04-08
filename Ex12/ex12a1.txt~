@@ -1,0 +1,8 @@
+		関数		計算
+No.0, n:3  main()               
+No.3, n:3  function1()
+No.4, n:9  function1()
+No.1, n:3  main()
+No.5, n:0  function2()
+No.6, n:9  function2()
+No.2, n:3  main()

@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main(void)
+{
+  int n,i;
+  int a[7];
+  i=0;
+  
+  printf("7人分の評点を入力して下さい。\n");
+  while(i!=7){
+    scanf("%d",&n);
+    a[i]=n;
+    i++;
+  }
+
+  for(i=0;i<7;i++){
+    if(a[i]<35)
+      printf("%d: %-3d F\n",i+1,a[i]);
+    if(a[i]>=35 && a[i]<50)
+      printf("%d: %-3d D\n",i+1,a[i]);
+    if(a[i]>=50 && a[i]<65)
+      printf("%d: %-3d C\n",i+1,a[i]);
+    if(a[i]>=65 && a[i]<80)
+      printf("%d: %-3d B\n",i+1,a[i]);
+    if(a[i]>=80)
+      printf("%d: %-3d A\n",i+1,a[i]);
+  }
+
+  return 0;
+}

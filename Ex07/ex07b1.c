@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main(void)
+{
+  int n, i;
+  i=0;
+  int a[10];
+  
+  while(n!=-1){
+    scanf("%d",&n);
+    a[i]=n;
+    i++;
+    if(i==11){
+      break;
+    }
+  }
+  for(i=i-2;i>=0;i--){
+    printf("%d\n",a[i]);
+  }
+
+  return 0;
+}
+  

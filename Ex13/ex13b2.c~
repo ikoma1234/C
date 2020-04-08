@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define QSIZE 5
+
+void enqueue(int);
+int dequeue(void);
+
+int queue[QSIZE];
+int head = 0;
+int dnum = 0;   /* データ数 */
+
+int main(){
+  int data, status, i; /* もし必要なら変数宣言を追加してもよい */
+
+  while (1) {
+    printf("input>> ");
+    status = scanf("%d", &data);
+    if (status != 1) break;
+    if (data == 0) printf("  Data: %d\n", dequeue() );
+    else enqueue(data);
+
+    /* ここにキューの内容表示処理を追加すること */
+  }
+ return 0;
+}
+
+/* 続けて、問題に合わせて修正した enqueue関数、dequeue関数を書く */

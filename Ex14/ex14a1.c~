@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <math.h>
+double bmi_hantei(double);
+int main(void){
+
+  double BMI[2][12];
+  double bmi[12];
+  int i,j;
+  
+  printf("身長(cm)と体重(kg)を空白で区切って 12 人分入力してください。\n");
+
+  for(i=0;i<2;i++){
+    for(j=0;j<12;j++){
+      scanf("%d",&BMI[i][j]);
+    }
+  }
+
+  for(j=0;j<12;j++){
+    bmi[j]=BMI[0][j]/pow((BMI[1][j]/100.00),2);
+  }
+
+  printf("               BMI     状態");
+
+  for(j=0;j<12;j++){
+    prinft("%d人目     %4.1f    ",j+1,bmi[j]);
+    bmi_hantei(bmi[j]);
+  }
+
+  bmi_hantei(-1);
+}
+
+double bmi_hantei(double x){
+  double i=0;
+  
+  if(0<=x<18.5) printf("やせている\n");
+  else if(x>=18.5 && x<25){
+    printf("正常\n");
+    i++;
+  }
+  else if(x>25) printf("太っている\n");
+  else   printf("BMI 値が正常な人の割合は%2.0fパーセントです。\n",(i/12)*100);
+}

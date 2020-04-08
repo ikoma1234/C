@@ -1,0 +1,8 @@
+		関数		計算
+No.0, n:3  main()             初期値 
+No.3, n:3  function1()　　　　 function1の引数なので3　　
+No.4, n:9  function1()        function1のn=n*n
+No.1, n:3  main()             main型のnはそのまま3
+No.5, n:0  function2()        function2でn=0を代入
+No.6, n:9  function2()        function2(n)の記述によりfunction2(int m)のmに3が代入される　m*m=9
+No.2, n:3  main()             main型のnはそのまま3

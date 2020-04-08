@@ -1,0 +1,22 @@
+#include <stdio.h>
+#define ROW 5
+
+int main()
+{
+  int xmax,ymax,i,j;
+  int zahyou[ROW][2];
+
+  for(i=0;i<ROW;i++){
+    printf("点%dの座標を整数値で入力してください\n",i+1);
+      for(j=0;j<2;j++)
+	scanf("%d",&zahyou[i][j]);
+  }
+  
+  for(i=0;i<ROW;i++){
+    if(zahyou[i+1][1]>zahyou[i][1])
+      xmax=zahyou[i+1][1];
+  }
+  printf("X座標が最大となる点は点%d(%d,%d)です\n",zahyou[2][1]);
+ 
+    return 0;
+}
